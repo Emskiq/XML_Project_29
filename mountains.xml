@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Nqmam ideq kvo e tva moi, she pogledna moje i ti -->
+<mountains_catalog xmlns="http://www.w3schools.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
+    
+    <mountains>
+        <mountain region="Central" type="High">
+            <name>Стара Планина</name>
+            <geological_construction>
+                Стара планина е младонагъната планинска система, изградена от няколко полегнали на север антиклинали: Берковска, Свогенска, Централнобалканска, Шипченска, Твърдишка, Сливенска, Котленска и Еминска.
+            </geological_construction>
+            <peaks>
+                <peak>Ботев</peak>
+                <peak>Голям Кадемлия</peak>
+                <peak>Млечния чал</peak>
+                <peak>Жълтец</peak>
+                <peak>Малък Кадемлия</peak>
+            </peaks>
+            <climate>
+               Климатът е умереноконтинентален, с изключение на най-източните части, които са подложени на преходноконтинентално влияние. 
+            </climate>
+            <!-- Ako iskash moje oshte neshta da dobavim (rasteniq/jivotni)? Az nqkvo kysichko go izmislih -->
+        </mountain>
 
-</xml>
+    <!-- Tuk dobavi oshte nqkoq planina Rila/Pirin/Vitosha (trqbva da sa 7-8) -->
+    </mountains>
+</mountains_catalog>
