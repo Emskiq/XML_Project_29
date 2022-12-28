@@ -1,29 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- Nqmam ideq kvo e tva moi, she pogledna moje i ti -->
+<!--
 <mountains_catalog xmlns="http://www.w3schools.com"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
-    
-    <mountains>
-        <mountain region="Central" type="High">
-            <name>Стара Планина</name>
-            <geological_construction>
-                Стара планина е младонагъната планинска система, изградена от няколко полегнали на север антиклинали: Берковска, Свогенска, Централнобалканска, Шипченска, Твърдишка, Сливенска, Котленска и Еминска.
-            </geological_construction>
-            <peaks>
-                <peak>Ботев</peak>
-                <peak>Голям Кадемлия</peak>
-                <peak>Млечния чал</peak>
-                <peak>Жълтец</peak>
-                <peak>Малък Кадемлия</peak>
-            </peaks>
-            <climate>
-               Климатът е умереноконтинентален, с изключение на най-източните части, които са подложени на преходноконтинентално влияние. 
-            </climate>
-            <!-- Ako iskash moje oshte neshta da dobavim (rasteniq/jivotni)? Az nqkvo kysichko go izmislih -->
-        </mountain>
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
+-->
 
-    <!-- Tuk dobavi oshte nqkoq planina Rila/Pirin/Vitosha (trqbva da sa 7-8) -->
-    </mountains>
-</mountains_catalog>
+<!DOCTYPE Mountain_Catalog[
+ <!ELEMENT Mountain_Catalog (Region+ | Type+ | Mountain+)*>
+ <!ELEMENT Region (#PCDATA)>
+ <!ATTLIST Region region_id ID #REQUIRED>
+ <!ELEMENT Type (#PCDATA)>
+ <!ATTLIST Type type_id ID #REQUIRED>
+ <!ELEMENT Mountain (Name*, Typeref*, Regionref*, Geological_Construction*, Peaks+, Climate*, Image*)>
+ <!ELEMENT Name (#PCDATA)>
+ <!ELEMENT Typeref (#PCDATA)>
+ <!ATTLIST Typeref type IDREF #IMPLIED>
+ <!ELEMENT Regionref (#PCDATA)>
+ <!ATTLIST Regionref region IDREF #IMPLIED>
+ <!ELEMENT Geological_Construction (#PCDATA)>
+ <!ELEMENT Peaks (Peak*)>
+ <!ELEMENT Peak (#PCDATA)>
+ <!ELEMENT Climate (#PCDATA)>
+ <!ELEMENT Image EMPTY>
+ <!ATTLIST Image src ENTITY #REQUIRED>
+ <!NOTATION JPG SYSTEM "image/jpeg">
+ <!ENTITY stara_planina SYSTEM "stara_planina.jpg" NDATA JPG>
+]>
+<Mountain_Catalog>
+
+	<Region region_id="CE">
+		Central
+	</Region>
+	<Region region_id="SE">
+		South East
+	</Region>
+	<Region region_id="SW">
+		South West
+	</Region>
+	<Region region_id="NE">
+		North East
+	</Region>
+	<Region region_id="NW">
+		North West
+	</Region>
+
+    <Type type_id="HI">High</Type>
+    <Type type_id="AH">Average High</Type>
+    <Type type_id="SH">Short</Type>
+
+
+    <Mountain>
+        <Name>Stara Planina</Name>
+        <Typeref type="AH">Average High</Typeref>
+        <Regionref region="CE">Central</Regionref>
+        <Geological_Construction>
+            Stara Planina is a young folded mountain system, built by several anticlines lying to the north: Berkovska, Svogenska, Central Balkanska, Shipchenska, Tvardishka, Slivenska, Kotlenska and Eminska.
+        </Geological_Construction>
+        <Peaks >
+            <Peak>
+                Botev
+            </Peak>
+            <Peak>
+                Goliam Kademliq
+            </Peak>
+            <Peak>
+                Mlichniq chal
+            </Peak>
+            <Peak>
+                Jultec
+            </Peak>
+            <Peak>
+                Maluk Kademliq
+            </Peak>
+        </Peaks>
+        <Climate>
+            The climate is temperate continental, except for the easternmost parts, which are subject to transitional continental influence.
+        </Climate>
+        <Image src="stara_planina"></Image>
+    </Mountain>
+			<!-- Ako iskash moje oshte neshta da dobavim (rasteniq/jivotni)? Az nqkvo kysichko go izmislih -->
+		<!-- Tuk dobavi oshte nqkoq planina Rila/Pirin/Vitosha (trqbva da sa 7-8) -->
+</Mountain_Catalog>
