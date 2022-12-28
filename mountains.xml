@@ -19,13 +19,14 @@ xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
  <!ELEMENT Regionref (#PCDATA)>
  <!ATTLIST Regionref region IDREF #IMPLIED>
  <!ELEMENT Geological_Construction (#PCDATA)>
- <!ELEMENT Peaks (Peak*)>
+ <!ELEMENT Peaks (Peak+)>
  <!ELEMENT Peak (#PCDATA)>
  <!ELEMENT Climate (#PCDATA)>
  <!ELEMENT Image EMPTY>
  <!ATTLIST Image src ENTITY #REQUIRED>
  <!NOTATION JPG SYSTEM "image/jpeg">
  <!ENTITY stara_planina SYSTEM "stara_planina.jpg" NDATA JPG>
+ <!ENTITY rila SYSTEM "rila.jpg" NDATA JPG>
 ]>
 <Mountain_Catalog>
 
@@ -78,6 +79,36 @@ xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
             The climate is temperate continental, except for the easternmost parts, which are subject to transitional continental influence.
         </Climate>
         <Image src="stara_planina"></Image>
+    </Mountain>
+    
+    <Mountain>
+        <Name>Rila</Name>
+        <Typeref type="HI">High</Typeref>
+        <Regionref region="SW">South West</Regionref>
+        <Geological_Construction>
+            Rila is a fault-block mountain and represents a crescent-shaped horst with two fault systems — concentric and radial.[6][13] It is part of the oldest land in the Balkans, the Macedonian–Thracian Massif.
+        </Geological_Construction>
+        <Peaks >
+            <Peak>
+                Musala
+            </Peak>
+            <Peak>
+                Malka Musala
+            </Peak>
+            <Peak>
+               Irechek
+            </Peak>
+            <Peak>
+                Bezimenen
+            </Peak>
+            <Peak>
+                Deno
+            </Peak>
+        </Peaks>
+        <Climate>
+            Rila is situated in the southern zone of the humid continental climate region and has typical Alpine climate with elevational zones. 
+        </Climate>
+        <Image src="rila"></Image>
     </Mountain>
 			<!-- Ako iskash moje oshte neshta da dobavim (rasteniq/jivotni)? Az nqkvo kysichko go izmislih -->
 		<!-- Tuk dobavi oshte nqkoq planina Rila/Pirin/Vitosha (trqbva da sa 7-8) -->
