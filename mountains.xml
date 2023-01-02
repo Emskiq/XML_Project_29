@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Nqmam ideq kvo e tva moi, she pogledna moje i ti -->
-<!--
-<mountains_catalog xmlns="http://www.w3schools.com"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
--->
 
 <!DOCTYPE Mountain_Catalog[
  <!ELEMENT Mountain_Catalog (Region+ | Type+ | Mountain+)*>
@@ -20,18 +14,37 @@ xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
  <!ATTLIST Regionref region IDREF #IMPLIED>
  <!ELEMENT Geological_Construction (#PCDATA)>
  <!ELEMENT Peaks (Peak+)>
- <!ELEMENT Peak (#PCDATA)>
+ <!ELEMENT Peak (Name*, Height*)>
+ <!ELEMENT Height (#PCDATA)>
  <!ELEMENT Climate (#PCDATA)>
  <!ELEMENT Image EMPTY>
  <!ATTLIST Image src ENTITY #REQUIRED>
- <!NOTATION JPG SYSTEM "image/jpeg">
+ <!NOTATION JPG SYSTEM "image/jpg">
  <!ENTITY stara_planina SYSTEM "stara_planina.jpg" NDATA JPG>
  <!ENTITY rila SYSTEM "rila.jpg" NDATA JPG>
+ <!ENTITY pirin SYSTEM "pirin.jpg" NDATA JPG>
+ <!ENTITY vitosha SYSTEM "vitosha.jpg" NDATA JPG>
+ <!ENTITY sredna_gora SYSTEM "sredna_gora.jpg" NDATA JPG>
+ <!ENTITY strandza SYSTEM "strandza.jpg" NDATA JPG>
+ <!ENTITY berkovska SYSTEM "berkovska.jpg" NDATA JPG>
+ <!ENTITY osogovo SYSTEM "osogovo.jpg" NDATA JPG>
 ]>
 <Mountain_Catalog>
 
 	<Region region_id="CE">
 		Central
+	</Region>
+	<Region region_id="NO">
+        North
+	</Region>
+	<Region region_id="SO">
+		South
+	</Region>
+	<Region region_id="EA">
+		East
+	</Region>
+	<Region region_id="WE">
+		West
 	</Region>
 	<Region region_id="SE">
 		South East
@@ -50,7 +63,6 @@ xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
     <Type type_id="AH">Average High</Type>
     <Type type_id="SH">Short</Type>
 
-
     <Mountain>
         <Name>Stara Planina</Name>
         <Typeref type="AH">Average High</Typeref>
@@ -58,27 +70,32 @@ xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
         <Geological_Construction>
             Stara Planina is a young folded mountain system, built by several anticlines lying to the north: Berkovska, Svogenska, Central Balkanska, Shipchenska, Tvardishka, Slivenska, Kotlenska and Eminska.
         </Geological_Construction>
-        <Peaks >
+        <Peaks>
             <Peak>
-                Botev
+                <Name>Botev</Name>
+                <Height>2376</Height>
             </Peak>
             <Peak>
-                Goliam Kademliq
+                <Name>Golyam Kademliya</Name>
+                <Height>2275</Height>
             </Peak>
             <Peak>
-                Mlichniq chal
+                <Name>Mlechniya Chal</Name>
+                <Height>2255</Height>
             </Peak>
             <Peak>
-                Jultec
+                <Name>Jyltets</Name>
+                <Height>2227</Height>
             </Peak>
             <Peak>
-                Maluk Kademliq
+                <Name>Malyk Kadamliya</Name>
+                <Height>2226</Height>
             </Peak>
         </Peaks>
         <Climate>
             The climate is temperate continental, except for the easternmost parts, which are subject to transitional continental influence.
         </Climate>
-        <Image src="stara_planina"></Image>
+        <Image src="stara_planina"/>
     </Mountain>
     
     <Mountain>
@@ -86,30 +103,231 @@ xsi:schemaLocation="http://www.w3schools.com xml_project.xsd">
         <Typeref type="HI">High</Typeref>
         <Regionref region="SW">South West</Regionref>
         <Geological_Construction>
-            Rila is a fault-block mountain and represents a crescent-shaped horst with two fault systems — concentric and radial.[6][13] It is part of the oldest land in the Balkans, the Macedonian–Thracian Massif.
+            Rila is a fault-block mountain and represents a crescent-shaped horst with two fault systems — concentric and radial. It is part of the oldest land in the Balkans, the Macedonian–Thracian Massif.
         </Geological_Construction>
         <Peaks >
             <Peak>
-                Musala
+                <Name>Musala</Name>
+                <Height>2925</Height>
             </Peak>
             <Peak>
-                Malka Musala
+                <Name>Malka Musala</Name>
+                <Height>2902</Height>
             </Peak>
             <Peak>
-               Irechek
+                <Name>Irechek</Name>
+                <Height>2852</Height>
             </Peak>
             <Peak>
-                Bezimenen
+                <Name>Bezimen</Name>
+                <Height>2782</Height>
             </Peak>
             <Peak>
-                Deno
+                <Name>Deno</Name>
+                <Height>2790</Height>
             </Peak>
         </Peaks>
         <Climate>
             Rila is situated in the southern zone of the humid continental climate region and has typical Alpine climate with elevational zones. 
         </Climate>
-        <Image src="rila"></Image>
+        <Image src="rila"/>
     </Mountain>
-			<!-- Ako iskash moje oshte neshta da dobavim (rasteniq/jivotni)? Az nqkvo kysichko go izmislih -->
-		<!-- Tuk dobavi oshte nqkoq planina Rila/Pirin/Vitosha (trqbva da sa 7-8) -->
+
+    <Mountain>
+        <Name>Pirin</Name>
+        <Typeref type="HI">High</Typeref>
+        <Regionref region="SW">South West</Regionref>
+        <Geological_Construction>
+            Geologically Pirin is a horst forming a massive anticline situated between the complex graben valleys of the Struma and the Mesta, formed by metamorphic rocks — gneiss, biotite and crystalline schists, amphibolite, quartzite and marblе.
+        </Geological_Construction>
+        <Peaks>
+            <Peak>
+                <Name>Vihren</Name>
+                <Height>2914</Height>
+            </Peak>
+            <Peak>
+                <Name>Kutelo</Name>
+                <Height>2908</Height>
+            </Peak>
+            <Peak>
+                <Name>Banski suhodol</Name>
+                <Height>2886</Height>
+            </Peak>
+            <Peak>
+                <Name>Polezhan</Name>
+                <Height>2852</Height>
+            </Peak>
+            <Peak>
+                <Name>Kamenitsa</Name>
+                <Height>2824</Height>
+            </Peak>
+        </Peaks>
+        <Climate>
+            Pirin is situated within the continental Mediterranean climate zone and due to its altitude the higher sectors have Alpine climate. The climate is influenced by Mediterranean cyclones mainly in late autumn and in winter, bringing frequent and high rainfall, and by the Azores anticyclone in summer, making the summer months hot and dry.
+        </Climate>
+        <Image src="pirin"/>
+    </Mountain>
+
+    <Mountain>
+        <Name>Vitosha</Name>
+        <Typeref type="AH">Average High</Typeref>
+        <Regionref region="WE">West</Regionref>
+        <Geological_Construction>
+            With regard to the bedrock and the folding of the earth's crust, Vitosha, together with the surrounding territories, is part of the Viskarsko-Vitosha synclinorium or the Sofia synclinorium. As a result, numerous fault processes can be traced on the territory. The main zones in which these processes take place are the Bosnian Fault, the Railway Shear Zone and others.
+        </Geological_Construction>
+        <Peaks>
+            <Peak>
+                <Name>Cherni Vrah</Name>
+                <Height>2290</Height>
+            </Peak>
+            <Peak>
+                <Name>Golyam Rezen</Name>
+                <Height>2277</Height>
+            </Peak>
+            <Peak>
+                <Name>Skoparnik</Name>
+                <Height>2227</Height>
+            </Peak>
+            <Peak>
+                <Name>Karachair</Name>
+                <Height>2208</Height>
+            </Peak>
+            <Peak>
+                <Name>Kupena</Name>
+                <Height>2196</Height>
+            </Peak>
+        </Peaks>
+        <Climate>
+            The climate of Vitosha is typically mountainous, with a large precipitation amount of 1250 mm. In its lowest parts, the annual amount of precipitation reaches 700 mm, and in the higher parts this value exceeds 1000 mm. On Cherni Vrah, the rainfall is 1050 mm. Solid precipitation from snow and hail accounts for over 50% of the total annual precipitation.
+        </Climate>
+        <Image src="vitosha"/>
+    </Mountain>
+
+    <Mountain>
+        <Name>Sredna Gora</Name>
+        <Typeref type="SH">Short</Typeref>
+        <Regionref region="CE">Central</Regionref>
+        <Geological_Construction>
+            The geological development of Srednogorje is inextricably linked with the Srednogorje geosyncline formed during the Senon and its later folding during the transition to the Paleocene during the manifestation of the Laramian orogeny. In the reach of the geosyncline, Senonian limestones and marls were deposited, which, due to the active underwater volcanic activity, form a complex sedimentary-volcanogenic complex.
+        </Geological_Construction>
+        <Peaks>
+            <Peak>
+                <Name>Bogdan</Name>
+                <Height>1604</Height>
+            </Peak>
+            <Peak>
+                <Name>Shiligarka</Name>
+                <Height>1577</Height>
+            </Peak>
+            <Peak>
+                <Name>Bunaya</Name>
+                <Height>1572</Height>
+            </Peak>
+            <Peak>
+                <Name>Aleksitsa</Name>
+                <Height>1535</Height>
+            </Peak>
+            <Peak>
+                <Name>Malyk Bogdan</Name>
+                <Height>1532</Height>
+            </Peak>
+        </Peaks>
+        <Climate>
+            The unequal altitude, the significant dismemberment and the different exposure of the relief of Sredna Gora together with the climate-forming impact of the transformed air masses from the neighboring lands determine the marked differentiation of the climatic conditions.
+        </Climate>
+        <Image src="sredna_gora"/>
+    </Mountain>
+    
+    <Mountain>
+        <Name>Strandza</Name>
+        <Typeref type="SH">Short</Typeref>
+        <Regionref region="SE">South East</Regionref>
+        <Geological_Construction>
+            The mountain is occupied by the so-called Strandzhan anticlinorium, which in its core is represented by Hercynian granite intrusions and Paleozoic and Mesozoic mantle, in which Senonian sediments and volcanics and Laramian-aged syenite-monzonites are involved. In connection with the geological structure of the mountain, there are rich deposits of minerals, the most important of which are the copper deposits in the area of the villages of Gramatikovo, Rosen and Zidarovo.
+        </Geological_Construction>
+        <Peaks>
+            <Peak>
+                <Name>Mahya</Name>
+                <Height>1031</Height>
+            </Peak>
+            <Peak>
+                <Name>Kaynak Tepe</Name>
+                <Height>888</Height>
+            </Peak>
+            <Peak>
+                <Name>Parashut Tepe</Name>
+                <Height>873</Height>
+            </Peak>
+            <Peak>
+                <Name>Meshe Tepe</Name>
+                <Height>855</Height>
+            </Peak>
+        </Peaks>
+        <Climate>
+            The climate of Strandzha is transitional-Mediterranean with a strong Black Sea influence on its northeastern slopes, which is confirmed not only by the high average January temperatures (from 2 to 3.2 °C), but also by the significant average annual precipitation amounts (from 500 to 1000 mm ). The close proximity to the Mediterranean cyclone tracks determines the thermal and precipitation regime, and the well-pronounced winter maximum of precipitation confirms the climate-forming effect of the Mediterranean Sea.
+        </Climate>
+        <Image src="strandza"/>
+    </Mountain>
+
+    <Mountain>
+        <Name>Berkovska Planina</Name>
+        <Typeref type="AH">Average High</Typeref>
+        <Regionref region="NW">North West</Regionref>
+        <Geological_Construction>
+            The mountain was formed on the southern hip of the Berkovo anticline. It is built of Paleozoic crystalline rocks - granites, Triassic, Jurassic and Cretaceous limestones, sandstones and conglomerates. On this basis, in its northeastern part, there are deposits of industrially important marbles and deposits of gold.
+        </Geological_Construction>
+        <Peaks>
+            <Peak>
+                <Name>Golyam Kom</Name>
+                <Height>2015</Height>
+            </Peak>
+            <Peak>
+                <Name>Sreden Kom</Name>
+                <Height>1958.9</Height>
+            </Peak>
+            <Peak>
+                <Name>Srebarna</Name>
+                <Height>1931.3</Height>
+            </Peak>
+            <Peak>
+                <Name>Kota</Name>
+                <Height>1814.3</Height>
+            </Peak>
+        </Peaks>
+        <Climate>
+            The climate is temperate-continental with relatively cold winters and cool summers. The right tributaries of the Ogosta River originate from the mountain in the northwest - Dulgodelska Ogosta, Zlatitsa, etc., and in the south - the rivers Nishava and its right tributary Visochitsa (Komshtitsa, Temska Reka), together with their right tributaries. Part of the waters of the rivers in the southeastern part of the mountain go to the cascade through channels
+        </Climate>
+        <Image src="berkovska"/>
+    </Mountain>
+
+    <Mountain>
+        <Name>Osogovo</Name>
+        <Typeref type="AH">Average High</Typeref>
+        <Regionref region="NW">West</Regionref>
+        <Geological_Construction>
+            In general, the mountain is made of crystalline rocks (amphibolites, gneisses and schists), in which a powerful granite pluton is embedded. It is crossed by Tertiary volcanic bodies, and its southeastern slopes are covered by sedimentary rocks (sandstones, conglomerates, etc.) of the same age. In this connection are also the deposits of lead-zinc ores.
+        </Geological_Construction>
+        <Peaks>
+            <Peak>
+                <Name>Ruen</Name>
+                <Height>2215</Height>
+            </Peak>
+            <Peak>
+                <Name>Mali Ruen</Name>
+                <Height>2230</Height>
+            </Peak>
+            <Peak>
+                <Name>Shapka</Name>
+                <Height>2188</Height>
+            </Peak>
+            <Peak>
+                <Name>Gorna Sulumka</Name>
+                <Height>2139</Height>
+            </Peak>
+        </Peaks>
+        <Climate>
+            The climate of the mountain is transitional-continental, and on its higher parts typically mountainous. The entire mountain completely falls into the White Sea watershed. Its northeastern and eastern slopes belong to the basin of the Struma River.
+        </Climate>
+        <Image src="osogovo"/>
+    </Mountain>
 </Mountain_Catalog>
