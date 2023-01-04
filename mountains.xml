@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="mountain.xsl" type="text/xml" version="1.0"?>
+<?xml-stylesheet href="mountains.xsl" type="text/xsl" version="2.0"?>
 
-<!DOCTYPE Mountain_Catalog[
- <!ELEMENT Mountain_Catalog (Region+ | Type+ | Mountain+)*>
- <!ELEMENT Region (#PCDATA)>
- <!ATTLIST Region region_id ID #REQUIRED>
- <!ELEMENT Type (#PCDATA)>
- <!ATTLIST Type type_id ID #REQUIRED>
- <!ELEMENT Mountain (Name*, Typeref*, Regionref*, Geological_Construction*, Peaks+, Climate*, Image*)>
- <!ELEMENT Name (#PCDATA)>
- <!ELEMENT Typeref (#PCDATA)>
- <!ATTLIST Typeref type IDREF #IMPLIED>
- <!ELEMENT Regionref (#PCDATA)>
- <!ATTLIST Regionref region IDREF #IMPLIED>
- <!ELEMENT Geological_Construction (#PCDATA)>
- <!ELEMENT Peaks (Peak+)>
- <!ELEMENT Peak (Name*, Height*)>
- <!ELEMENT Height (#PCDATA)>
- <!ELEMENT Climate (#PCDATA)>
- <!ELEMENT Image EMPTY>
- <!ATTLIST Image src ENTITY #REQUIRED>
- <!NOTATION JPG SYSTEM "image/jpg">
- <!ENTITY stara_planina SYSTEM "stara_planina.jpg" NDATA JPG>
- <!ENTITY rila SYSTEM "rila.jpg" NDATA JPG>
- <!ENTITY pirin SYSTEM "pirin.jpg" NDATA JPG>
- <!ENTITY vitosha SYSTEM "vitosha.jpg" NDATA JPG>
- <!ENTITY sredna_gora SYSTEM "sredna_gora.jpg" NDATA JPG>
- <!ENTITY strandza SYSTEM "strandza.jpg" NDATA JPG>
- <!ENTITY berkovska SYSTEM "berkovska.jpg" NDATA JPG>
- <!ENTITY osogovo SYSTEM "osogovo.jpg" NDATA JPG>
-]>
+<!DOCTYPE Mountain_Catalog SYSTEM "mountains.dtd">
 <Mountain_Catalog>
 
 	<Region region_id="CE">
